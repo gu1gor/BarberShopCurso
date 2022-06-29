@@ -1,5 +1,7 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Pessoa {
@@ -17,11 +19,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public Pessoa(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
+    public Pessoa(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg) throws ParseException {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.dataNascimento = dataNascimento;
+        this.dataNascimento = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(dataNascimento);
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;
