@@ -23,7 +23,7 @@ public abstract class Pessoa {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.dataNascimento = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(dataNascimento);
+        this.dataNascimento = new SimpleDateFormat("dd/MM/yyyy").parse(dataNascimento);
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;

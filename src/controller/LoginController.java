@@ -1,7 +1,9 @@
 package controller;
 
 import View.Login;
+import View.MenuPrincipal;
 import controller.helper.LoginHelper;
+import model.DAO.UsuarioDAO;
 import model.Usuario;
 
 public class LoginController {
@@ -24,9 +26,25 @@ public class LoginController {
         
         
         //Pegar um Usuario da View
-        //Pesquisar Usuário no Banco
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO(); 
+        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+        
         //Se o usuario da view tiver mesmo usuario e senha que o usuario vindo do banco, direcionar para menu principal
-        //Senão mostrar uma mensagem ao usuario "Usuario ou senha invalidos" 
+        //Senão mostrar uma mensagem ao usuario "Usuario ou senha invalidos"         
+        if(usuarioAutenticado != null){
+                MenuPrincipal menu = new MenuPrincipal();
+                menu.setVisible(true);
+                this.view.dispose();    
+                
+        }else{
+             view.exibeMensagem("Usuario ou senha invalidos");
+        }
+            
+                
+
+                //Pesquisar Usuário no Banco
+        
     }
     
     public void fizTarefa(){
