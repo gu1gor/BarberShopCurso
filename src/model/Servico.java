@@ -1,6 +1,7 @@
 package model;
 
 public class Servico {
+
     private int id;
     private String descricao;
     private float valor;
@@ -34,12 +35,10 @@ public class Servico {
     public void setId(int id) {
         this.id = id;
     }
-    
-    
-    
 
-    
-    
-    
-    
+    @Override
+    public String toString() {
+        return getDescricao();
+    }
+
 }
