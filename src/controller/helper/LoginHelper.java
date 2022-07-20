@@ -3,7 +3,7 @@ package controller.helper;
 import View.Login;
 import model.Usuario;
 
-public class LoginHelper {
+public class LoginHelper implements IHelper {
 
     private final Login view;
 

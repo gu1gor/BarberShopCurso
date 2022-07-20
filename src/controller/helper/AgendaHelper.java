@@ -8,7 +8,7 @@ import model.Agendamento;
 import model.Cliente;
 import model.Servico;
 
-public class AgendaHelper {
+public class AgendaHelper implements IHelper {
     
     private final Agenda view;
     
@@ -65,6 +65,16 @@ public class AgendaHelper {
     
     public void setarValor(float valor) {
         view.getTextValor().setText(valor + "");
+    }
+
+    @Override
+    public Object obterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void limparTela() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
