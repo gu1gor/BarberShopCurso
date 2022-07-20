@@ -21,7 +21,7 @@ public class AgendaController {
         this.helper = new AgendaHelper(view);
     }
 
-    public void atualizarTablela() {
+    public void atualizaTabela() {
 
         //Buscar uma lista com agendamentos do banco de dados
         AgendamentoDAO agendamentoDAO = new AgendamentoDAO();
@@ -59,8 +59,15 @@ public class AgendaController {
     
     public void agendar(){
         //Buscar Objeto Agendamento da Tela
-        
+        Agendamento agendamento = helper.obterModelo();        
         // Salvar o Objeto no banco de dados
+        new AgendamentoDAO().insert(agendamento);
+        
+        
+        
+        //Inserir elemento na tabela
+        atualizaTabela();
+        helper.limparTela();
     }
         
 
