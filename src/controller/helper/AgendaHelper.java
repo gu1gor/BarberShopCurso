@@ -87,17 +87,17 @@ public class AgendaHelper implements IHelper {
 
         Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, oberservacao);
         return agendamento;
-        
+
         //new Agendamento();
     }
 
     @Override
     public void limparTela() {
-        view.getTextId().setText("");
+        view.getTextId().setText("0");
         view.getTextFormatedData().setText("");
         view.getTextFormatedHora().setText("");
         view.getTextObservacao().setText("");
-        
+
     }
 
 }

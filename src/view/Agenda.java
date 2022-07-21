@@ -200,7 +200,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_JComboBoxServicoActionPerformed
 
     private void JComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JComboBoxServicoItemStateChanged
-        
+
         this.controller.atualizaValor();
     }//GEN-LAST:event_JComboBoxServicoItemStateChanged
 
@@ -333,7 +333,5 @@ public class Agenda extends javax.swing.JFrame {
     public void setTextObservacao(JTextArea TextObservacao) {
         this.TextObservacao = TextObservacao;
     }
-    
-    
 
 }
